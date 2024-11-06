@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-	<title>Profolio - Bootstrap 5 Personal Portfolio &amp; Resume Template For Developers</title>
+	<title>Sumin's Contact</title>
 	
 	<!-- Meta -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Profolio Bootstrap 5 Template">
-	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-	<link rel="shortcut icon" href="favicons/.-9948-favicon.ico"> 
+	  
+	<link rel="shortcut icon" href="images/me.JPG">
+
 	
 	<!-- Google Fonts -->
 	
@@ -111,7 +111,7 @@
 						<div class="intro-holder">
 							<h2 class="intro-name text-center">Get In Touch</h2>
 							<div class="contact-intro text-md-center limit-max-width mx-auto">
-							    <p>Contact intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat sodales massa vitae ornare. Quisque ac ipsum quam. </p>
+							    <p>If you’d like to connect or discuss potential projects, feel free to reach out! I’m always open to new opportunities, collaborations, or simply having a conversation about Flutter development and tech. Whether you have a question or a project in mind, don’t hesitate to contact me. Let’s create something amazing together! </p>
 							    
 							    
 							</div>
@@ -129,29 +129,23 @@
 						</div><!--//intro-holder-->
 						
 						<div class="contact-form-wrapper pt-3">
-						    <form id="contact-form" class="contact-form p-md-4 px-lg-5">
-						        <h4 class="text-center mb-4">Contact Form</h4>
-						      
-						        <div class="row g-3">                                                           
-					                <div class="col-md-6">
-					                    <label class="sr-only" for="cname">Name</label>
-					                    <input type="text" class="form-control" id="cname" name="name" placeholder="Name" minlength="2" required="">
-					                </div>                    
-					                <div class="col-md-6">
-					                    <label class="sr-only" for="cemail">Email</label>
-					                    <input type="email" class="form-control" id="cemail" name="email" placeholder="Email" required="">
-					                </div>
-					                
-					                <div class="col-12">
-					                    <label class="sr-only" for="cmessage">Your message</label>
-					                    <textarea class="form-control" id="cmessage" name="message" placeholder="Enter your message" rows="10" required=""></textarea>
-					                </div>
-					                 <div class="col-12">
-					                    <button type="submit" class="btn w-100 btn-secondary py-2">Submit</button>
-					                </div>                           
-					            </div><!--//form-row-->
-					        </form>
-					    </div><!--//contact-form-wrapper-->
+							<form id="contact-form" class="contact-form p-md-4 px-lg-5" onsubmit="return sendEmail(event)">
+								<h4 class="text-center mb-4">Contact Form</h4>
+								
+								<div class="row g-3">
+						
+						
+									<div class="col-md-12">
+										<label class="sr-only" for="cmessage">Message</label>
+										<textarea class="form-control" id="cmessage" name="message" placeholder="Your message" rows="4" required></textarea>
+									</div>
+								</div>
+								
+								<div class="text-center mt-3">
+									<button type="submit" class="btn btn-primary">Submit</button>
+								</div>
+							</form>
+						</div>
 						
 					</section><!--//page-intro-section-->
 
@@ -161,10 +155,26 @@
 		</div><!--//row-->
 	
 	<!--//container-->
+	<script>
+		function sendEmail(event) {
+			event.preventDefault(); // Prevent form submission
 	
-	<footer class="footer text-center py-4">
-		<small class="copyright">Template Copyright &copy; <a href="themes.3rdwavemedia.html" target="_blank">3rd Wave Media</a></small>
-	</footer>
+			// Get the values from the form
+			var name = document.getElementById('cname').value;
+			var message = document.getElementById('cmessage').value;
+	
+			// Encode the content for mailto
+			var subject = 'Contact Form Submission';
+			var body = `Name: ${name}\n\nMessage: ${message}`;
+	
+			// Create the mailto link
+			var mailtoLink = `mailto:hello.suminmaharjan@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+	
+			// Redirect to the mailto link
+			window.location.href = mailtoLink;
+		}
+	</script>
+
 	
 	<!-- *****CONFIGURE STYLE (REMOVE ON YOUR PRODUCTION SITE)****** -->  
 	<div id="config-panel" class="config-panel config-panel-hide d-none d-lg-block">
