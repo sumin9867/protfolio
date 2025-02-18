@@ -155,25 +155,7 @@
 		</div><!--//row-->
 	
 	<!--//container-->
-	<script>
-		function sendEmail(event) {
-			event.preventDefault(); // Prevent form submission
-	
-			// Get the values from the form
-			var name = document.getElementById('cname').value;
-			var message = document.getElementById('cmessage').value;
-	
-			// Encode the content for mailto
-			var subject = 'Contact Form Submission';
-			var body = `Name: ${name}\n\nMessage: ${message}`;
-	
-			// Create the mailto link
-			var mailtoLink = `mailto:hello.suminmaharjan@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-	
-			// Redirect to the mailto link
-			window.location.href = mailtoLink;
-		}
-	</script>
+
 
 	
 	<!-- *****CONFIGURE STYLE (REMOVE ON YOUR PRODUCTION SITE)****** -->  
@@ -209,3 +191,22 @@
 	<script src="js/demo-style-switcher.js"></script>
 
 </body></html>
+<script>
+	function sendEmail(event) {
+		event.preventDefault(); // Prevent form submission
+
+		// Get the values from the form
+		var name = document.getElementById('cname').value;
+		var message = document.getElementById('cmessage').value;
+
+		// Encode the content for mailto
+		var subject = 'Contact Form Submission';
+		var body = `Name: ${name}\n\nMessage: ${message}`;
+
+		// Create the mailto link
+		var mailtoLink = `mailto:hello.suminmaharjan@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+		// Redirect to the mailto link
+		window.location.href = mailtoLink;
+	}
+</script>
