@@ -103,51 +103,47 @@
 						
 					</div><!--//top-bar-->
 					
-					<section class="page-intro-section section has-profile-image mx-auto ">
-					
+					<section class="page-intro-section section has-profile-image mx-auto">
 						<div class="profile-holder text-center">
 							<img class="profile-pic rounded-circle" src="images/me.JPG" alt="image">
 						</div><!--//profile-holder-->
 						<div class="intro-holder">
 							<h2 class="intro-name text-center">Get In Touch</h2>
 							<div class="contact-intro text-md-center limit-max-width mx-auto">
-							    <p>If you’d like to connect or discuss potential projects, feel free to reach out! I’m always open to new opportunities, collaborations, or simply having a conversation about Flutter development and tech. Whether you have a question or a project in mind, don’t hesitate to contact me. Let’s create something amazing together! </p>
-							    
-							    
+								<p>If you’d like to connect or discuss potential projects, feel free to reach out! I’m always open to new opportunities, collaborations, or simply having a conversation about Flutter development and tech. Whether you have a question or a project in mind, don’t hesitate to contact me. Let’s create something amazing together!</p>
+								<p>Phone: <a href="tel:+1234567890">+977 9867811182</a></p>
+								<p>Email: <a href="mailto:hello.suminmaharjan@email.com">hello.suminmaharjan@gmail.com</a></p>
 							</div>
-							
+					
 							<ul class="social-list list-inline mx-auto d-block d-lg-none py-3 text-center">
 								<li class="list-inline-item me-1 me-lg-2"><a href="#"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
 								<li class="list-inline-item me-1 me-lg-2"><a href="#"><i class="fa-brands fa-github fa-fw"></i></a></li>
-								
 								<li class="list-inline-item me-1 me-lg-2"><a href="#"><i class="fa-brands fa-linkedin-in fa-fw"></i></a></li>
-								
 								<li class="list-inline-item me-1 me-lg-2"><a href="#"><i class="fa-brands fa-stack-overflow fa-fw"></i></a></li>
 								<li class="list-inline-item me-0 me-lg-2"><a href="#"><i class="fa-brands fa-medium fa-fw"></i></a></li>
 							</ul><!--//social-list-->
-							
+					
 						</div><!--//intro-holder-->
-						
+					
 						<div class="contact-form-wrapper pt-3">
 							<form id="contact-form" class="contact-form p-md-4 px-lg-5" onsubmit="return sendEmail(event)">
 								<h4 class="text-center mb-4">Contact Form</h4>
-								
+					
 								<div class="row g-3">
-						
-						
 									<div class="col-md-12">
 										<label class="sr-only" for="cmessage">Message</label>
 										<textarea class="form-control" id="cmessage" name="message" placeholder="Your message" rows="4" required></textarea>
 									</div>
 								</div>
-								
+					
 								<div class="text-center mt-3">
 									<button type="submit" class="btn btn-primary">Submit</button>
 								</div>
 							</form>
 						</div>
-						
+					
 					</section><!--//page-intro-section-->
+					
 
 				</div>
 			</div><!--//main-content-wrapper-->
@@ -155,25 +151,7 @@
 		</div><!--//row-->
 	
 	<!--//container-->
-	<script>
-		function sendEmail(event) {
-			event.preventDefault(); // Prevent form submission
-	
-			// Get the values from the form
-			var name = document.getElementById('cname').value;
-			var message = document.getElementById('cmessage').value;
-	
-			// Encode the content for mailto
-			var subject = 'Contact Form Submission';
-			var body = `Name: ${name}\n\nMessage: ${message}`;
-	
-			// Create the mailto link
-			var mailtoLink = `mailto:hello.suminmaharjan@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-	
-			// Redirect to the mailto link
-			window.location.href = mailtoLink;
-		}
-	</script>
+
 
 	
 	<!-- *****CONFIGURE STYLE (REMOVE ON YOUR PRODUCTION SITE)****** -->  
@@ -209,3 +187,22 @@
 	<script src="js/demo-style-switcher.js"></script>
 
 </body></html>
+<script>
+	function sendEmail(event) {
+		event.preventDefault(); // Prevent form submission
+
+		// Get the values from the form
+		var name = document.getElementById('cname').value;
+		var message = document.getElementById('cmessage').value;
+
+		// Encode the content for mailto
+		var subject = 'Contact Form Submission';
+		var body = `Name: ${name}\n\nMessage: ${message}`;
+
+		// Create the mailto link
+		var mailtoLink = `mailto:hello.suminmaharjan@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+		// Redirect to the mailto link
+		window.location.href = mailtoLink;
+	}
+</script>
