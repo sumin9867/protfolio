@@ -70,7 +70,7 @@ export const services: Service[] = [
   {
     index: '03',
     title: 'Backend & APIs',
-    items: ['Firebase', 'Supabase (Learning)', 'REST APIs', 'GraphQL', 'WebSocket'],
+    items: ['Firebase', 'Supabase (Learning)', 'REST APIs', 'GraphQL'],
   },
   {
     index: '04',
@@ -89,8 +89,8 @@ export const services: Service[] = [
   },
   {
     index: '07',
-    title: 'Exploring',
-    items: ['WebRTC (Audio & Video Calling)', 'Socket.IO', 'System Design'],
+    title: 'Real-Time Communication',
+    items: ['WebSocket', 'WebRTC (Audio & Video Calling)', 'Socket.IO', 'System Design'],
   },
 ]
 

@@ -40,7 +40,7 @@ export function Contact() {
           : 'Submit'
 
   return (
-    <section id="contact" className="py-24 md:py-36">
+    <section id="contact" className="py-16 md:py-36">
       <div className="container-x">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-20">
           {/* Heading side */}

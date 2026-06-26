@@ -7,7 +7,7 @@ import { Reveal } from '../components/Reveal'
  */
 export function ValueProp() {
   return (
-    <section className="flex min-h-[80vh] items-center py-28 md:py-40">
+    <section className="flex items-center py-16 md:min-h-[80vh] md:py-40">
       <div className="container-x">
         <Reveal>
           <p className="mx-auto max-w-5xl text-center text-[clamp(1.75rem,4.5vw,3.25rem)] font-medium leading-[1.2] tracking-tighter">

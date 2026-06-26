@@ -3,12 +3,11 @@ import { bio } from '../data/content'
 import { Reveal } from '../components/Reveal'
 import { RollingText } from '../components/RollingText'
 import { handleAnchorClick } from '../lib/scroll'
-import { asset } from '../lib/asset'
 
 /** `slotRef` marks the portrait card slot the travelling image lands in. */
 export function Bio({ slotRef }: { slotRef?: RefObject<HTMLDivElement> }) {
   return (
-    <section id="bio" className="py-24 md:py-32 lg:py-40">
+    <section id="bio" className="py-14 md:py-28 lg:py-40">
       <div className="container-x">
         {/* Three-column intro: heading + short bio | portrait | long bio + CTA */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
@@ -22,15 +21,11 @@ export function Bio({ slotRef }: { slotRef?: RefObject<HTMLDivElement> }) {
             </p>
           </Reveal>
 
-          {/* Center: portrait slot. Desktop: empty spacer where the shared
-              travelling image (from <Intro>) lands. Mobile: static image. */}
-          <div ref={slotRef} className="order-first aspect-[4/5] md:order-none">
-            <img
-              src={asset('/hero/sumin.png')}
-              alt="Portrait of Sumin"
-              className="h-full w-full overflow-hidden rounded-3xl object-cover md:hidden"
-            />
-          </div>
+          {/* Center: portrait slot. Desktop only — an empty spacer where the
+              shared travelling image (from <Intro>) lands. On mobile the
+              portrait lives solely in the hero, so this is hidden to avoid
+              showing the photo twice. */}
+          <div ref={slotRef} className="hidden aspect-[4/5] md:block" />
 
           {/* Right: longer bio + CTA, pinned to bottom */}
           <Reveal delay={0.2} className="flex flex-col justify-end gap-6">

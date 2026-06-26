@@ -45,7 +45,7 @@ function AppCard({ title, category, description, tech, icon, android, ios }: Pro
 
 export function Work() {
   return (
-    <section id="work" className="py-20 md:py-28">
+    <section id="work" className="py-14 md:py-24 lg:py-28">
       <div className="container-x">
         <Reveal>
           <header className="mb-12 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between md:mb-16">

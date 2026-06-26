@@ -4,7 +4,7 @@ import { handleAnchorClick } from '../lib/scroll'
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-ink text-cream">
-      <div className="container-x relative z-10 pb-44 pt-20 md:pb-56 md:pt-28">
+      <div className="container-x relative z-10 pb-32 pt-14 md:pb-56 md:pt-28">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           {/* Heading */}
           <h2 className="text-[clamp(2.5rem,5vw,3.75rem)] font-semibold leading-[0.95] tracking-tightest">

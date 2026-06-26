@@ -3,7 +3,7 @@ import { Reveal } from '../components/Reveal'
 
 export function Experience() {
   return (
-    <section id="experience" className="py-20 md:py-28">
+    <section id="experience" className="py-14 md:py-24 lg:py-28">
       <div className="container-x">
         <Reveal>
           <h2 className="mb-12 text-[clamp(2.5rem,7vw,5rem)] font-semibold leading-none tracking-tightest md:mb-16">
