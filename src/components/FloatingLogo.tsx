@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { asset } from '../lib/asset'
 
 interface FloatingLogoProps {
   src: string
@@ -30,7 +31,7 @@ export function FloatingLogo({
 }: FloatingLogoProps) {
   return (
     <motion.img
-      src={src}
+      src={asset(src)}
       alt={alt}
       aria-hidden
       className={`pointer-events-none absolute z-10 select-none drop-shadow-[0_10px_25px_rgba(0,0,0,0.12)] ${position} ${size}`}

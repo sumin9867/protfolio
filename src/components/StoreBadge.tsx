@@ -1,3 +1,5 @@
+import { asset } from '../lib/asset'
+
 /**
  * Official Play Store / App Store download badge linking to a listing.
  * Uses the real badge artwork from /public/badges.
@@ -15,7 +17,7 @@ export function StoreBadge({ store, href }: { store: 'android' | 'ios'; href: st
       onClick={(e) => e.stopPropagation()}
       className="inline-block transition-transform duration-300 hover:scale-[1.03]"
     >
-      <img src={src} alt={label} className="h-9 w-auto" loading="lazy" />
+      <img src={asset(src)} alt={label} className="h-9 w-auto" loading="lazy" />
     </a>
   )
 }

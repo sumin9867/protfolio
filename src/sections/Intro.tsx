@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform, useSpring, type MotionValue } from 'framer-motion'
 import { Hero } from './Hero'
 import { Bio } from './Bio'
+import { asset } from '../lib/asset'
 
 interface Rect {
   top: number
@@ -106,7 +107,7 @@ function TravellingPortrait({
       className="pointer-events-none absolute z-30 hidden origin-center overflow-hidden rounded-3xl shadow-[0_30px_80px_rgba(0,0,0,0.18)] md:block"
     >
       <img
-        src="/hero/sumin.png"
+        src={asset('/hero/sumin.png')}
         alt="Portrait of Sumin"
         className="h-full w-full object-cover"
       />

@@ -3,6 +3,7 @@ import { bio } from '../data/content'
 import { Reveal } from '../components/Reveal'
 import { RollingText } from '../components/RollingText'
 import { handleAnchorClick } from '../lib/scroll'
+import { asset } from '../lib/asset'
 
 /** `slotRef` marks the portrait card slot the travelling image lands in. */
 export function Bio({ slotRef }: { slotRef?: RefObject<HTMLDivElement> }) {
@@ -25,7 +26,7 @@ export function Bio({ slotRef }: { slotRef?: RefObject<HTMLDivElement> }) {
               travelling image (from <Intro>) lands. Mobile: static image. */}
           <div ref={slotRef} className="order-first aspect-[4/5] md:order-none">
             <img
-              src="/hero/sumin.png"
+              src={asset('/hero/sumin.png')}
               alt="Portrait of Sumin"
               className="h-full w-full overflow-hidden rounded-3xl object-cover md:hidden"
             />

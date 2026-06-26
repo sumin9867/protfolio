@@ -1,6 +1,7 @@
 import { projects, type Project } from '../data/content'
 import { Reveal } from '../components/Reveal'
 import { StoreBadge } from '../components/StoreBadge'
+import { asset } from '../lib/asset'
 
 function AppCard({ title, category, description, tech, icon, android, ios }: Project) {
   return (
@@ -8,7 +9,7 @@ function AppCard({ title, category, description, tech, icon, android, ios }: Pro
       {/* Header: icon + name + category */}
       <div className="flex items-center gap-4">
         <img
-          src={icon}
+          src={asset(icon)}
           alt={`${title} app icon`}
           loading="lazy"
           className="h-14 w-14 shrink-0 rounded-2xl border border-line object-cover"

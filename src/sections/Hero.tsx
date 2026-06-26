@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { type RefObject } from 'react'
 import { hero, site } from '../data/content'
 import { FloatingLogo } from '../components/FloatingLogo'
+import { asset } from '../lib/asset'
 
 /**
  * Centered, slightly-tilted display hero matching the original:
@@ -20,7 +21,7 @@ export function Hero({ slotRef }: { slotRef?: RefObject<HTMLDivElement> }) {
     >
       {/* Decorative 3D shapes */}
       <motion.img
-        src="/hero/shape-b.png"
+        src={asset('/hero/shape-b.png')}
         alt=""
         aria-hidden
         className="pointer-events-none absolute left-[6%] top-[22%] w-20 select-none md:w-28 lg:w-36"
@@ -29,7 +30,7 @@ export function Hero({ slotRef }: { slotRef?: RefObject<HTMLDivElement> }) {
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
       />
       <motion.img
-        src="/hero/shape-a.png"
+        src={asset('/hero/shape-a.png')}
         alt=""
         aria-hidden
         className="pointer-events-none absolute right-[7%] top-[55%] w-20 select-none md:w-28 lg:w-36"
@@ -120,7 +121,7 @@ export function Hero({ slotRef }: { slotRef?: RefObject<HTMLDivElement> }) {
           scroll. Mobile: a static image, since there's no scroll travel. */}
       <div ref={slotRef} className="relative z-10 mt-10 h-44 w-36 md:h-52 md:w-40">
         <motion.img
-          src="/hero/sumin.png"
+          src={asset('/hero/sumin.png')}
           alt="Portrait of Sumin"
           className="h-full w-full overflow-hidden rounded-2xl object-cover md:hidden"
           initial={{ opacity: 0, y: 30 }}
